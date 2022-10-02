@@ -12,3 +12,20 @@ The BBVA webpage is opened
     Sleep                               5s
     Click Element                       ${cookies_btn}  
 
+The user click to go to BBVA "${go_blog}"
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Click Element                       ${blog} 
+
+Select the option to go to the blog penultimate page
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Click Element                       ${last_page}
+    Sleep                               5s
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Click Element                       ${penultimate_page} 
+
+Click to open the penultimate page article
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Click Element                       ${blog_post} 
+
+The main title should be "${title_post}"
+    Title Should Be                ${title}  

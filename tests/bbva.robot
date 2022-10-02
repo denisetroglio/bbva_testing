@@ -12,4 +12,9 @@ Test Teardown                  Close Browser session
 BBVA Home Page
     [tags]      home_page
     Given the BBVA webpage is opened
+    When the user click to go to BBVA "blog"
+    And select the option to go to the blog penultimate page
+    And click to open the penultimate page article
+    Then the main title should be "Google Cloud Next ‘18: las claves del evento más importante de Google Cloud - BBVA Next Technologies"
+
 
